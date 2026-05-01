@@ -73,6 +73,21 @@ button{
   <button onclick="logout()">Logout</button>
 </div>
 
+<script>
+const API = "https://law-firm-crm-1.onrender.com";
+const token = localStorage.getItem("token");
+
+if(!token){
+  alert("Login first");
+  window.location.href="login.html";
+}
+
+function logout(){
+  localStorage.removeItem("token");
+  window.location.href="login.html";
+}
+</script>
+
 <!-- ================= CONTACT STATS ================= -->
 <div class="stats">
   <div class="box">Total: <span id="total">0</span></div>
@@ -101,22 +116,10 @@ button{
 
 <script>
 
-const token = localStorage.getItem("token");
-
-if(!token){
-  alert("Login first");
-  window.location.href="login.html";
-}
-
-function logout(){
-  localStorage.removeItem("token");
-  window.location.href="login.html";
-}
-
 /* ================= CONTACT STATS ================= */
 async function loadStats(){
 
-  const res = await fetch("http://localhost:5000/api/admin/stats",{
+  const res = await fetch(`${API}/api/admin/stats`,{
     headers:{ Authorization:"Bearer " + token }
   });
 
@@ -134,7 +137,7 @@ async function loadData(){
   const search = document.getElementById("search").value;
 
   const res = await fetch(
-    `http://localhost:5000/api/admin/contacts?search=${search}`,
+    `${API}/api/admin/contacts?search=${search}`,
     { headers:{ Authorization:"Bearer " + token } }
   );
 
@@ -159,7 +162,6 @@ async function loadData(){
       <h3>${item.name}</h3>
       <p>${item.email}</p>
       <p>${item.message}</p>
-
       <button onclick="deleteMsg('${item._id}')">Delete</button>
     `;
 
@@ -170,7 +172,7 @@ async function loadData(){
 /* ================= DELETE CONTACT ================= */
 async function deleteMsg(id){
 
-  await fetch(`http://localhost:5000/api/admin/contact/${id}`,{
+  await fetch(`${API}/api/admin/contact/${id}`,{
     method:"DELETE",
     headers:{ Authorization:"Bearer " + token }
   });
@@ -188,7 +190,7 @@ async function addCase(){
     description: document.getElementById("caseDesc").value
   };
 
-  const res = await fetch("http://localhost:5000/api/admin/case",{
+  const res = await fetch(`${API}/api/admin/case`,{
     method:"POST",
     headers:{
       "Content-Type":"application/json",
@@ -201,6 +203,7 @@ async function addCase(){
 
   if(result.success){
     alert("Case Added Successfully ✅");
+
     document.getElementById("caseTitle").value = "";
     document.getElementById("clientName").value = "";
     document.getElementById("caseDesc").value = "";
@@ -212,7 +215,7 @@ async function addCase(){
 /* ================= LOAD CASES ================= */
 async function loadCases(){
 
-  const res = await fetch("http://localhost:5000/api/admin/case",{
+  const res = await fetch(`${API}/api/admin/case`,{
     headers:{ Authorization:"Bearer " + token }
   });
 
