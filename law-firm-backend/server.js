@@ -209,6 +209,10 @@ app.get("/api/admin/stats", auth, async (req, res) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send("Law Firm API is running...");
+});
+
 /* =========================
    SERVER START
 ========================= */
