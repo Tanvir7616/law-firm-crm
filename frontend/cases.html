@@ -54,7 +54,7 @@ async function loadCases(){
   try{
 
     // ✅ FIXED: public route (no auth issue)
-    const res = await fetch("http://localhost:5000/api/admin/case");
+    const res = await fetch("https://law-firm-crm-1.onrender.com/api/admin/case");
 
     const result = await res.json();
 
