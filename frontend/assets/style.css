@@ -1,0 +1,463 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+/* TOPBAR */
+.topbar {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 13px;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: white;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.navbar nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+.btn {
+  background: #0f172a;
+  color: white !important;
+  padding: 10px 16px;
+  border-radius: 6px;
+}
+
+/* HERO */
+.hero {
+  height: 92vh;
+  background: url("assets/images/hero.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+}
+
+.badge {
+  background: gold;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  margin: 20px 0;
+}
+
+.hero-content p {
+  color: #ddd;
+  font-size: 16px;
+}
+
+.hero-btns {
+  margin-top: 25px;
+}
+
+.btn-primary {
+  background: gold;
+  padding: 12px 20px;
+  color: black;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.btn-outline {
+  border: 1px solid white;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.stats h3 {
+  font-size: 24px;
+  color: gold;
+}
+
+/* ABOUT */
+.about-preview {
+  padding: 80px;
+  background: #f8f9fc;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.container img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+/* SECTION */
+.section {
+  padding: 80px;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 30px;
+  background: #f4f4f4;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* CTA */
+.cta {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 80px;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  padding: 50px;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+copyright {
+  text-align: center;
+}
+
+/* PAGE HERO */
+.page-hero {
+  padding: 80px;
+  text-align: center;
+  background: #0f172a;
+  color: white;
+}
+
+.page-hero h1 {
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* ABOUT */
+.about-grid {
+  display: flex;
+  gap: 40px;
+  padding: 80px;
+}
+
+.about-img img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+/* SERVICES */
+.service-grid,
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 80px;
+}
+
+.service-card,
+.case-card {
+  background: #f4f4f4;
+  padding: 30px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.service-card:hover,
+.case-card:hover {
+  transform: translateY(-5px);
+  background: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* CONTACT */
+.contact-section {
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* CONTACT LAYOUT */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px;
+  gap: 50px;
+}
+
+/* LEFT PANEL */
+.contact-info {
+  flex: 1;
+  background: #0f172a;
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.contact-info h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+/* PHONE LINK */
+.contact-info a {
+  color: gold;
+  text-decoration: none;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 18px;
+  background: #25D366;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* QR CODE */
+.qr-box {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.qr-box img {
+  width: 150px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* FORM */
+.contact-form-box {
+  flex: 1;
+  padding: 40px;
+  background: #f8f9fc;
+  border-radius: 10px;
+}
+
+.contact-form-box h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.contact-form-box button {
+  background: #0f172a;
+  color: white;
+  padding: 12px;
+  border: none;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* PAGE HERO */
+.page-hero {
+  text-align: center;
+  padding: 80px;
+  background: #0f172a;
+  color: white;
+}
+
+/* HERO */
+.contact-hero {
+  text-align: center;
+  padding: 70px;
+  background: #0f172a;
+  color: white;
+}
+
+.contact-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+}
+
+/* WRAPPER */
+.contact-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding: 60px;
+  flex-wrap: wrap;
+}
+
+/* CARD STYLE */
+.contact-card {
+  width: 380px;
+  padding: 30px;
+  border-radius: 15px;
+
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* LEFT INFO */
+.info-card h2 {
+  margin-bottom: 20px;
+}
+
+.info-item {
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+.info-item a {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* QR */
+.qr-card {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.qr-card img {
+  width: 140px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* FORM */
+.form-card h2 {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #0f172a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
